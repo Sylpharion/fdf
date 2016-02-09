@@ -16,26 +16,26 @@ void		map_up(t_map *sizes)
 {
 	mlx_clear_window(sizes->mlx, sizes->win);
   	sizes->pos_y -= 10;
-  	drawing_test(sizes);
+  	draw(sizes);
 }
 
 void		map_down(t_map *sizes)
 {
 	mlx_clear_window(sizes->mlx, sizes->win);
   	sizes->pos_y += 10;
-  	drawing_test(sizes);
+  	draw(sizes);
 }
 
 void		map_left(t_map *sizes)
 {
 	mlx_clear_window(sizes->mlx, sizes->win);
   	sizes->pos_x -= 10;
-  	drawing_test(sizes);
+  	draw(sizes);
 }
 
 void		map_right(t_map *sizes)
 {
 	mlx_clear_window(sizes->mlx, sizes->win);
   	sizes->pos_x += 10;
-  	drawing_test(sizes);
+  	draw(sizes);
 }

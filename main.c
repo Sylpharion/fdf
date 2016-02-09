@@ -36,9 +36,8 @@ int	my_key(int keycode, t_map *sizes)
   	if (keycode == 49)
   	{
   		mlx_clear_window(sizes->mlx, sizes->win);
-  		ft_putnbr(sizes->size_x);
-  		ft_putnbr(sizes->size_y);
-  		drawing_test(sizes);
+  		sizes->proj += 1;
+  		draw(sizes);
   	}
 	if (keycode == 53)
   		exit(0);
@@ -63,18 +62,13 @@ int		main(int argc, char const **argv)
 		return (1);
 	sizes.fd = open(argv[1], O_RDONLY);
 	sizes.raw_map = get_file_content(sizes);
-/* *********** test ***************** 
-	ft_putendl("raw map:");
-	int ii = 0;
-	while (sizes.raw_map[ii])
-	{
-		ft_putendl(sizes.raw_map[ii]);
-		ii++;
-	}*/
-//************************************ 
 	get_map_size(&sizes);
 	create_map(&sizes);
-	drawing_test_deux(&sizes);
+	draw(&sizes);
+/*	if (sizes.proj % 2 == 0)
+		drawing_test(&sizes);
+	else
+		drawing_test_deux(&sizes);*/
 	ft_putstr("\nsucces");
 	mlx_hook(sizes.win, 2, 64, my_key, &sizes);
 	mlx_mouse_hook(sizes.win, down_ald, 0);

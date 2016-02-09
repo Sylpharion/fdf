@@ -16,33 +16,33 @@ void		z_up(t_map *sizes)
 {
 	mlx_clear_window(sizes->mlx, sizes->win);
 	sizes->size_z += 2;
-	drawing_test(sizes);
+	draw(sizes);
 }
 
 void		z_down(t_map *sizes)
 {
 	mlx_clear_window(sizes->mlx, sizes->win);
 	sizes->size_z -= 2;
-	drawing_test(sizes);
+	draw(sizes);
 }
 
 void		size_up(t_map *sizes)
 {
 	mlx_clear_window(sizes->mlx, sizes->win);
 	sizes->mod += 2;
-	drawing_test(sizes);
+	draw(sizes);
 }
 
 void		size_down(t_map *sizes)
 {
 	mlx_clear_window(sizes->mlx, sizes->win);
 	sizes->mod -= 2;
-	drawing_test(sizes);
+	draw(sizes);
 }
 
 void		color_change(t_map *sizes)
 {
 	mlx_clear_window(sizes->mlx, sizes->win);
 	sizes->color += 6;
-	drawing_test(sizes);
+	draw(sizes);
 }

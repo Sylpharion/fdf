@@ -46,4 +46,5 @@ void		map_init(t_map *sizes)
 	sizes->len = 0;
 	sizes->mod = 20;
 	sizes->color = 0;
+	sizes->proj = 0;
 }

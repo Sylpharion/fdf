@@ -57,6 +57,7 @@ typedef struct s_map
 	int 	*len;
 	int 	mod;
 	int 	color;
+	int 	proj;
 }				t_map;
 
 typedef struct s_draw
@@ -86,16 +87,22 @@ void	create_map(t_map *sizes);
 
 void	draw_init(t_draw *drawing);
 void	point_init(t_point *points);
-void 	drawing_test(t_map *sizes);
 int		drawing_color(t_point points, t_map sizes);
 void	drawing_line(t_point points, t_map *sizes);
+int		my_key(int keycode, t_map *sizes);
+void	draw(t_map *sizes);
+
+void 	drawing_test(t_map *sizes);
 void	draw_x(t_map *sizes, t_point *points, int x, int y);
 void	draw_y(t_map *sizes, t_point *points, int x, int y);
-int		my_key(int keycode, t_map *sizes);
 
 void	draw_x_deux(t_map *sizes, t_point *points, int x, int y);
 void	draw_y_deux(t_map *sizes, t_point *points, int x, int y);
 void	drawing_test_deux(t_map *sizes);
+
+void	draw_x_trois(t_map *sizes, t_point *points, int x, int y);
+void	draw_y_trois(t_map *sizes, t_point *points, int x, int y);
+void	drawing_test_trois(t_map *sizes);
 
 void	map_up(t_map *sizes);
 void	map_down(t_map *sizes);
