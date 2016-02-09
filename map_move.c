@@ -39,3 +39,10 @@ void		map_right(t_map *sizes)
   	sizes->pos_x += 10;
   	draw(sizes);
 }
+
+void    map_project(t_map *sizes)
+{
+  mlx_clear_window(sizes->mlx, sizes->win);
+  sizes->proj += 1;
+  draw(sizes);
+}

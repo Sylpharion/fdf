@@ -92,22 +92,23 @@ void	drawing_line(t_point points, t_map *sizes);
 int		my_key(int keycode, t_map *sizes);
 void	draw(t_map *sizes);
 
-void 	drawing_test(t_map *sizes);
+void 	drawing_iso(t_map *sizes, int y);
 void	draw_x(t_map *sizes, t_point *points, int x, int y);
 void	draw_y(t_map *sizes, t_point *points, int x, int y);
 
 void	draw_x_deux(t_map *sizes, t_point *points, int x, int y);
 void	draw_y_deux(t_map *sizes, t_point *points, int x, int y);
-void	drawing_test_deux(t_map *sizes);
+void	drawing_paral(t_map *sizes, int y);
 
 void	draw_x_trois(t_map *sizes, t_point *points, int x, int y);
 void	draw_y_trois(t_map *sizes, t_point *points, int x, int y);
-void	drawing_test_trois(t_map *sizes);
+void	drawing_basic(t_map *sizes, int y);
 
 void	map_up(t_map *sizes);
 void	map_down(t_map *sizes);
 void	map_left(t_map *sizes);
 void	map_right(t_map *sizes);
+void    map_project(t_map *sizes);
 void	z_up(t_map *sizes);
 void	z_down(t_map *sizes);
 void	size_up(t_map *sizes);

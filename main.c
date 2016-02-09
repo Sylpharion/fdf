@@ -14,7 +14,6 @@
 
 int	my_key(int keycode, t_map *sizes)
 {
-  printf("keycode : %d\n", keycode);
   	if (keycode == 126)
   		z_up(sizes);
   	if (keycode == 125)
@@ -34,11 +33,7 @@ int	my_key(int keycode, t_map *sizes)
   	if (keycode == 82)
   		color_change(sizes);
   	if (keycode == 49)
-  	{
-  		mlx_clear_window(sizes->mlx, sizes->win);
-  		sizes->proj += 1;
-  		draw(sizes);
-  	}
+  		map_project(sizes);
 	if (keycode == 53)
   		exit(0);
 	return (0);
@@ -46,8 +41,6 @@ int	my_key(int keycode, t_map *sizes)
 
 int down_ald(int keycode)
 {
-	if (keycode == 1)
-		exit(0);
 	if (keycode == 2)
 		exit(0);
 	return (0);
@@ -65,10 +58,6 @@ int		main(int argc, char const **argv)
 	get_map_size(&sizes);
 	create_map(&sizes);
 	draw(&sizes);
-/*	if (sizes.proj % 2 == 0)
-		drawing_test(&sizes);
-	else
-		drawing_test_deux(&sizes);*/
 	ft_putstr("\nsucces");
 	mlx_hook(sizes.win, 2, 64, my_key, &sizes);
 	mlx_mouse_hook(sizes.win, down_ald, 0);
