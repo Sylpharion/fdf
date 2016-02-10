@@ -14,15 +14,15 @@
 
 void			draw_x_trois(t_map *sizes, t_point *points, int x, int y)
 {
-	points->z = sizes->map[y][x] > 0? sizes->map[y][x] + sizes->size_z :
+	points->z = sizes->map[y][x] > 0 ? sizes->map[y][x] + sizes->size_z :
 				sizes->map[y][x];
 	points->x0 = ((sizes->mod * x) + (sizes->pos_x - 100) + 5);
-	points->y0 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (5 - 
+	points->y0 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (5 -
 					points->z);
-	points->z = sizes->map[y][x + 1] > 0? sizes->map[y][x + 1] +
+	points->z = sizes->map[y][x + 1] > 0 ? sizes->map[y][x + 1] +
 				sizes->size_z : sizes->map[y][x + 1];
-	points->x1 = ((sizes->mod * (x +1)) + (sizes->pos_x - 100) + 5);
-	points->y1 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (5 - 
+	points->x1 = ((sizes->mod * (x + 1)) + (sizes->pos_x - 100) + 5);
+	points->y1 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (5 -
 					points->z);
 	points->z = sizes->map[y][x + 1] > sizes->map[y][x] ?
 					sizes->map[y][x + 1] + sizes->size_z :
@@ -32,15 +32,15 @@ void			draw_x_trois(t_map *sizes, t_point *points, int x, int y)
 
 void			draw_y_trois(t_map *sizes, t_point *points, int x, int y)
 {
-	points->z = sizes->map[y][x + 1] > 0? sizes->map[y][x + 1] +
+	points->z = sizes->map[y][x + 1] > 0 ? sizes->map[y][x + 1] +
 				sizes->size_z : sizes->map[y][x + 1];
-	points->x0 = (sizes->mod * (x +1) + (sizes->pos_x - 100) + 5);
-	points->y0 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (5 - 
+	points->x0 = (sizes->mod * (x + 1) + (sizes->pos_x - 100) + 5);
+	points->y0 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (5 -
 					points->z);
-	points->z = sizes->map[y + 1][x + 1] > 0? sizes->map[y + 1][x + 1] +
+	points->z = sizes->map[y + 1][x + 1] > 0 ? sizes->map[y + 1][x + 1] +
 				sizes->size_z : sizes->map[y + 1][x + 1];
-	points->x1 = ((sizes->mod * (x +1)) + (sizes->pos_x - 100) + 5);
-	points->y1 = ((sizes->mod * (y +1)) + (sizes->pos_y - 100)) + (5 - 
+	points->x1 = ((sizes->mod * (x + 1)) + (sizes->pos_x - 100) + 5);
+	points->y1 = ((sizes->mod * (y + 1)) + (sizes->pos_y - 100)) + (5 -
 					points->z);
 	points->z = sizes->map[y + 1][x + 1] > sizes->map[y][x + 1] ?
 					sizes->map[y + 1][x + 1] + sizes->size_z :

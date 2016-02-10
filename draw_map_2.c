@@ -14,16 +14,16 @@
 
 void			draw_x_deux(t_map *sizes, t_point *points, int x, int y)
 {
-	points->z = sizes->map[y][x] > 0? sizes->map[y][x] + sizes->size_z :
+	points->z = sizes->map[y][x] > 0 ? sizes->map[y][x] + sizes->size_z :
 				sizes->map[y][x];
 	points->x0 = ((sizes->mod * x) + (sizes->pos_x + (y * sizes->mod)) + 0);
-	points->y0 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (0 - 
+	points->y0 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (0 -
 					points->z);
-	points->z = sizes->map[y][x + 1] > 0? sizes->map[y][x + 1] +
+	points->z = sizes->map[y][x + 1] > 0 ? sizes->map[y][x + 1] +
 				sizes->size_z : sizes->map[y][x + 1];
 	points->x1 = ((sizes->mod * (x + 1)) + (sizes->pos_x +
 					(y * sizes->mod)) + 0);
-	points->y1 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (0 - 
+	points->y1 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (0 -
 					points->z);
 	points->z = sizes->map[y][x + 1] > sizes->map[y][x] ?
 					sizes->map[y][x + 1] + sizes->size_z :
@@ -33,17 +33,17 @@ void			draw_x_deux(t_map *sizes, t_point *points, int x, int y)
 
 void			draw_y_deux(t_map *sizes, t_point *points, int x, int y)
 {
-	points->z = sizes->map[y][x + 1] > 0? sizes->map[y][x + 1] +
+	points->z = sizes->map[y][x + 1] > 0 ? sizes->map[y][x + 1] +
 				sizes->size_z : sizes->map[y][x + 1];
 	points->x0 = (sizes->mod * (x + 1)) + (sizes->pos_x +
 					(y * sizes->mod)) + 0;
-	points->y0 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (0 - 
+	points->y0 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (0 -
 					points->z);
-	points->z = sizes->map[y + 1][x + 1] > 0? sizes->map[y + 1][x + 1] +
+	points->z = sizes->map[y + 1][x + 1] > 0 ? sizes->map[y + 1][x + 1] +
 				sizes->size_z : sizes->map[y + 1][x + 1];
 	points->x1 = ((sizes->mod * (x + 2)) + (sizes->pos_x +
 					(y * sizes->mod)) + 0);
-	points->y1 = ((sizes->mod * (y + 1)) + (sizes->pos_y - 100)) + (0 - 
+	points->y1 = ((sizes->mod * (y + 1)) + (sizes->pos_y - 100)) + (0 -
 					points->z);
 	points->z = sizes->map[y + 1][x + 1] > sizes->map[y][x + 1] ?
 					sizes->map[y + 1][x + 1] + sizes->size_z :
@@ -80,7 +80,7 @@ void			drawing_paral(t_map *sizes, int y)
 	}
 }
 
-void		draw(t_map *sizes)
+void			draw(t_map *sizes)
 {
 	if (sizes->proj % 3 == 0)
 		drawing_basic(sizes, 0);

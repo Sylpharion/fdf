@@ -36,7 +36,10 @@ void		size_up(t_map *sizes)
 void		size_down(t_map *sizes)
 {
 	mlx_clear_window(sizes->mlx, sizes->win);
-	sizes->mod -= 2;
+	if (sizes->mod < 6 && sizes->mod > 0)
+		sizes->mod -= 1;
+	else
+		sizes->mod -= 2;
 	draw(sizes);
 }
 

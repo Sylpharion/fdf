@@ -75,15 +75,13 @@ int			get_map_size(t_map *sizes)
 	return (0);
 }
 
-void		create_map(t_map *sizes)
+void		create_map(t_map *sizes, int y)
 {
 	int		x;
-	int		y;
 	int		i;
 	char	**tmp;
 
 	sizes->map = (int **)malloc(sizeof(int *) * sizes->size_y);
-	y = 0;
 	while (y < sizes->size_y)
 	{
 		x = 0;

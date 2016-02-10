@@ -62,13 +62,13 @@ void			drawing_line(t_point points, t_map *sizes)
 
 void			draw_x(t_map *sizes, t_point *points, int x, int y)
 {
-	points->z = sizes->map[y][x] > 0? sizes->map[y][x] + sizes->size_z :
+	points->z = sizes->map[y][x] > 0 ? sizes->map[y][x] + sizes->size_z :
 				sizes->map[y][x];
 	points->x0 = (sizes->mod * x) + (sizes->pos_x + (x - y *
 					(sizes->mod / 2)));
 	points->y0 = (sizes->mod * y) + ((sizes->pos_y - 1 +
 					(x - y * (sizes->mod / 2))) - points->z);
-	points->z = sizes->map[y][x + 1] > 0? sizes->map[y][x + 1] +
+	points->z = sizes->map[y][x + 1] > 0 ? sizes->map[y][x + 1] +
 				sizes->size_z : sizes->map[y][x + 1];
 	points->x1 = (sizes->mod * (x + 1)) + (sizes->pos_x +
 					(x - y * (sizes->mod / 2)));
@@ -82,13 +82,13 @@ void			draw_x(t_map *sizes, t_point *points, int x, int y)
 
 void			draw_y(t_map *sizes, t_point *points, int x, int y)
 {
-	points->z = sizes->map[y][x + 1] > 0? sizes->map[y][x + 1] +
+	points->z = sizes->map[y][x + 1] > 0 ? sizes->map[y][x + 1] +
 				sizes->size_z : sizes->map[y][x + 1];
 	points->x0 = (sizes->mod * (x + 1)) + (sizes->pos_x + (x - y *
 					(sizes->mod / 2)));
 	points->y0 = (sizes->mod * y) + (sizes->pos_y + (x - y *
 					(sizes->mod / 2)) - points->z);
-	points->z = sizes->map[y + 1][x + 1] > 0? sizes->map[y + 1][x + 1] +
+	points->z = sizes->map[y + 1][x + 1] > 0 ? sizes->map[y + 1][x + 1] +
 				sizes->size_z : sizes->map[y + 1][x + 1];
 	points->x1 = (sizes->mod * (x + 1)) + (sizes->pos_x + ((x -
 					(sizes->mod / 2)) - y * (sizes->mod / 2)));

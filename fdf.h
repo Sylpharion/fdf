@@ -25,22 +25,25 @@
 # include "libft/libft.h"
 
 # define WHITE 0xFFFFFF
+
 # define DARK_GREEN 0x006000
 # define GREEN 0x00FF00
 # define CYAN 0x00FFFF
 # define YELLOW 0xFFFF00
 # define ORANGE 0xFF8000
 # define RED 0xFF0000
-# define DARK_BLUE 0x000033
-# define MARINE_BLUE 0x000099
+
+# define DARK_BLUE 0x002049
+# define MARINE_BLUE 0x002080
 # define BLUE 0x0000FF
-# define LIGHT_BLUE 0x0066FF
-# define AQUA_BLUE 0x00CCFF
+# define LIGHT_BLUE 0x0020FF
+# define AQUA_BLUE 0x0066FF
+
 # define BLACK 0x000000
 # define GRAY 0x696969
-# define STEEL_GRAY 0xDCDCDC
-# define LIGHT_GRAY 0xEEEEEE
-# define WHITE_SMOKE 0xF5F5F5
+# define STEEL_GRAY 0x999999
+# define LIGHT_GRAY 0xABABAB
+# define WHITE_SMOKE 0xDCDCDC
 
 typedef struct s_map
 {
@@ -83,7 +86,7 @@ int		array_len(char **a);
 void	map_init(t_map *sizes);
 char	**get_file_content(t_map sizes);
 int		get_map_size(t_map *sizes);
-void	create_map(t_map *sizes);
+void	create_map(t_map *sizes, int y);
 
 void	draw_init(t_draw *drawing);
 void	point_init(t_point *points);
