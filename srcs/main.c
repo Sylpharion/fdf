@@ -59,6 +59,7 @@ int			main(int argc, char const **argv)
 	create_map(&sizes, 0);
 	draw(&sizes);
 	ft_putstr("\nsucces");
+	mlx_menu(&sizes);
 	mlx_hook(sizes.win, 2, 64, my_key, &sizes);
 	mlx_mouse_hook(sizes.win, down_ald, 0);
 	mlx_loop(sizes.mlx);

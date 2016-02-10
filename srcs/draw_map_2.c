@@ -83,9 +83,18 @@ void			drawing_paral(t_map *sizes, int y)
 void			draw(t_map *sizes)
 {
 	if (sizes->proj % 3 == 0)
+	{
 		drawing_basic(sizes, 0);
+		mlx_menu(sizes);
+	}
 	else if (sizes->proj % 3 == 1)
+	{
 		drawing_iso(sizes, 0);
+		mlx_menu(sizes);
+	}
 	else if (sizes->proj % 3 == 2)
+	{
 		drawing_paral(sizes, 0);
+		mlx_menu(sizes);
+	}
 }

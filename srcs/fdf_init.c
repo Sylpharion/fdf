@@ -31,6 +31,20 @@ void		draw_init(t_draw *drawing)
 	drawing->sy = 0;
 }
 
+void		mlx_menu(t_map *sizes)
+{
+	mlx_string_put(sizes->mlx, sizes->win, 800, 0, GREEN,
+		"2, 4, 6, 8 : modifier la position.");
+	mlx_string_put(sizes->mlx, sizes->win, 800, 20, CYAN,
+		"flèche haut et bas : modifier la hauteur");
+	mlx_string_put(sizes->mlx, sizes->win, 800, 40, YELLOW,
+		"+ et - : modifier le zoom");
+	mlx_string_put(sizes->mlx, sizes->win, 800, 60, ORANGE,
+		"espace : modifier la couleur");
+	mlx_string_put(sizes->mlx, sizes->win, 800, 80, RED,
+		"esc ou clic droit : fermer la fenetre");
+}
+
 void		map_init(t_map *sizes)
 {
 	sizes->size_y = 0;

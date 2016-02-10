@@ -117,6 +117,7 @@ void				z_down(t_map *sizes);
 void				size_up(t_map *sizes);
 void				size_down(t_map *sizes);
 void				color_change(t_map *sizes);
+void				mlx_menu(t_map *sizes);
 
 int					put_color(int color);
 int					therm_color(int color);
