@@ -40,7 +40,9 @@ void		mlx_menu(t_map *sizes)
 	mlx_string_put(sizes->mlx, sizes->win, 800, 40, YELLOW,
 		"+ et - : modifier le zoom");
 	mlx_string_put(sizes->mlx, sizes->win, 800, 60, ORANGE,
-		"espace : modifier la couleur");
+		"espace : modifier le type de projection");
+	mlx_string_put(sizes->mlx, sizes->win, 800, 80, RED,
+		"0 : changer de couleur");
 	mlx_string_put(sizes->mlx, sizes->win, 800, 80, RED,
 		"esc ou clic droit : fermer la fenetre");
 }
