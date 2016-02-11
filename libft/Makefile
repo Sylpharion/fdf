@@ -6,7 +6,7 @@
 #    By: smassand <smassand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/09 11:55:41 by smassand          #+#    #+#              #
-#    Updated: 2015/11/30 16:47:03 by smassand         ###   ########.fr        #
+#    Updated: 2016/02/11 10:52:34 by smassand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC=	ft_memchr.c		ft_putnbr_fd.c		ft_striter.c	ft_strnew.c		\
 		ft_putendl.c	ft_strdel.c			ft_strncmp.c	ft_toupper.c	\
 		ft_memalloc.c	ft_putendl_fd.c		ft_strdup.c		ft_strncpy.c	\
 		ft_memccpy.c	ft_putnbr.c			ft_strequ.c		ft_strnequ.c	\
-		ft_isspace.c	get_next_line.c		ft_getnbr.c
+		ft_isspace.c	get_next_line.c
 
 OBJ= $(SRC:.c=.o)
 

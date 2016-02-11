@@ -6,7 +6,7 @@
 /*   By: smassand <smassand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/26 14:13:04 by smassand          #+#    #+#             */
-/*   Updated: 2015/03/24 14:49:34 by smassand         ###   ########.fr       */
+/*   Updated: 2016/02/11 10:41:50 by smassand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_putstr_fd(const char *s, int fd)
 	size_t		i;
 
 	i = ft_strlen(s);
-	write (fd, s, i);
+	write(fd, s, i);
 }

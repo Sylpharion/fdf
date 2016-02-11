@@ -6,7 +6,7 @@
 /*   By: smassand <smassand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 17:48:05 by smassand          #+#    #+#             */
-/*   Updated: 2016/01/19 17:48:13 by smassand         ###   ########.fr       */
+/*   Updated: 2016/02/11 11:04:34 by smassand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ void		mlx_menu(t_map *sizes)
 	mlx_string_put(sizes->mlx, sizes->win, 800, 0, GREEN,
 		"2, 4, 6, 8 : modifier la position.");
 	mlx_string_put(sizes->mlx, sizes->win, 800, 20, CYAN,
-		"flèche haut et bas : modifier la hauteur");
+		"fleche haut et bas : modifier la hauteur");
 	mlx_string_put(sizes->mlx, sizes->win, 800, 40, YELLOW,
 		"+ et - : modifier le zoom");
 	mlx_string_put(sizes->mlx, sizes->win, 800, 60, ORANGE,
 		"espace : modifier le type de projection");
 	mlx_string_put(sizes->mlx, sizes->win, 800, 80, RED,
 		"0 : changer de couleur");
-	mlx_string_put(sizes->mlx, sizes->win, 800, 80, RED,
+	mlx_string_put(sizes->mlx, sizes->win, 800, 100, WHITE,
 		"esc ou clic droit : fermer la fenetre");
 }
 

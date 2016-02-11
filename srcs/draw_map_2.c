@@ -16,13 +16,14 @@ void			draw_x_deux(t_map *sizes, t_point *points, int x, int y)
 {
 	points->z = sizes->map[y][x] > 0 ? sizes->map[y][x] + sizes->size_z :
 				sizes->map[y][x];
-	points->x0 = ((sizes->mod * x) + (sizes->pos_x + (y * sizes->mod)) + 0);
+	points->x0 = ((sizes->mod * x) + (sizes->pos_x + (y * sizes->mod)) +
+					points->z);
 	points->y0 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (0 -
 					points->z);
 	points->z = sizes->map[y][x + 1] > 0 ? sizes->map[y][x + 1] +
 				sizes->size_z : sizes->map[y][x + 1];
 	points->x1 = ((sizes->mod * (x + 1)) + (sizes->pos_x +
-					(y * sizes->mod)) + 0);
+					(y * sizes->mod)) + points->z);
 	points->y1 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (0 -
 					points->z);
 	points->z = sizes->map[y][x + 1] > sizes->map[y][x] ?
@@ -36,13 +37,13 @@ void			draw_y_deux(t_map *sizes, t_point *points, int x, int y)
 	points->z = sizes->map[y][x + 1] > 0 ? sizes->map[y][x + 1] +
 				sizes->size_z : sizes->map[y][x + 1];
 	points->x0 = (sizes->mod * (x + 1)) + (sizes->pos_x +
-					(y * sizes->mod)) + 0;
+					(y * sizes->mod)) + points->z;
 	points->y0 = ((sizes->mod * y) + (sizes->pos_y - 100)) + (0 -
 					points->z);
 	points->z = sizes->map[y + 1][x + 1] > 0 ? sizes->map[y + 1][x + 1] +
 				sizes->size_z : sizes->map[y + 1][x + 1];
 	points->x1 = ((sizes->mod * (x + 2)) + (sizes->pos_x +
-					(y * sizes->mod)) + 0);
+					(y * sizes->mod)) + points->z);
 	points->y1 = ((sizes->mod * (y + 1)) + (sizes->pos_y - 100)) + (0 -
 					points->z);
 	points->z = sizes->map[y + 1][x + 1] > sizes->map[y][x + 1] ?

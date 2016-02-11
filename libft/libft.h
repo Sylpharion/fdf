@@ -6,7 +6,7 @@
 /*   By: smassand <smassand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/15 17:59:22 by smassand          #+#    #+#             */
-/*   Updated: 2015/11/30 16:54:25 by smassand         ###   ########.fr       */
+/*   Updated: 2016/02/11 10:52:17 by smassand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ char				*ft_strnew(size_t size);
 void				ft_striter(char *s, void (*f) (char *));
 size_t				ft_strlen(const char *s);
 int					ft_atoi(const char *nptr);
-int                 ft_getnbr(char *str);
 char				*ft_strmap(const char *s, char (*f) (char));
 char				*ft_strmapi(const char *s, char (*f) (unsigned int, char));
 int					ft_strequ(const char *s1, const char *s2);
